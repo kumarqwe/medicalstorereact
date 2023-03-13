@@ -1,0 +1,25 @@
+.medicine-table {
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .header-cell {
+    background-color: #e5e90f;
+    border: 1px solid #08070707;
+    color: #2e0fdc;
+    font-weight: bold;
+    padding: 10px;
+  }
+  
+  .data-row {
+    background-color: #fff;
+    border: 1px solid #0c0c0c;
+    color: #dc1111;
+    padding: 10px;
+  }
+  
+  .data-row:nth-child(even) {
+    background-color: #f5efef;
+  }
