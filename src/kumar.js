@@ -49,6 +49,10 @@ function Login() {
             Medicine
           </Link>
           <br />
+          <Link to="/getregistration" className='Link'>
+            LoginDetails
+          </Link>
+          <br />
           <Link to="/event" className='Link' >
             Events
           </Link>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useEffect,useState } from 'react'
+import './table.css';
 
 
 function Payment()
@@ -13,22 +14,23 @@ function Payment()
     },[])
     return (
          <div>
-            <button onClick={() => setShowPayments(true)}>showResult</button>
+            <button className='Link' onClick={() => setShowPayments(true)}>showResult</button>
             {payments && (
            <table>
             <thead>
                 <tr>
-                    <th>PaymentID</th>
-                    <th>User ID</th>
-                    <th>Transaction Amount</th>
-                    <th>Payment Method</th>
-                    <th>Reciept</th>
-                    <th>PaymentAt</th>
+                    <th className='header-cell'>PaymentID</th>
+                    <th className='header-cell'>User ID</th>
+                    <th className='header-cell'>Transaction Amount</th>
+                    <th className='header-cell'>Payment Method</th>
+                    <th className='header-cell'>Reciept</th>
+                    <th className='header-cell'>PaymentAt</th>
                 </tr>
             </thead>
             <tbody>
                 {data.map(item => (
-                    <tr key={item.paymentId}>
+                    <tr key={item.paymentId} className='data-row'>
+                        <td>{item.paymentId}</td>
                         <td>{item.userId}</td>
                         <td>{item.transactionAmount}</td>
                         <td>{item.paymentMethod}</td>

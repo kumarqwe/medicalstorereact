@@ -1,5 +1,6 @@
 import React from 'react'
 import { useEffect,useState } from 'react'
+import './table.css';
 
 
 function Invitation()
@@ -18,15 +19,15 @@ function Invitation()
            <table>
             <thead>
                 <tr>
-                    <th>Invitation ID</th>
-                    <th>userEmail</th>
-                    <th>Discount</th>
-                    <th>Sent At</th>
+                    <th className='Link'>Invitation ID</th>
+                    <th className='header-cell'>userEmail</th>
+                    <th className='header-cell'>Discount</th>
+                    <th className='header-cell'>Sent At</th>
                 </tr>
             </thead>
             <tbody>
                 {data.map(item => (
-                    <tr key={item.invitationId}>
+                    <tr key={item.invitationId} className='data-row'>
                         <td>{item.userEmail}</td>
                         <td>{item.discount}</td>
                         <td>{item.sentAt}</td>

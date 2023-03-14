@@ -1,8 +1,8 @@
 import React from 'react'
 import { useEffect,useState } from 'react'
+import './table.css';
 
-
-function LoginRegistration()
+function GetRegistration()
 {
     const [data,setData] = useState([]);
     const [loginregistration, setShowLoginRegistration] = useState(false);
@@ -13,20 +13,21 @@ function LoginRegistration()
     },[])
     return (
          <div>
-            <button onClick={() => setShowLoginRegistration(true)}>showResult</button>
+            <button className='Link' onClick={() => setShowLoginRegistration(true)}>showResult</button>
             {loginregistration && (
            <table>
             <thead>
                 <tr>
-                    <th>User ID</th>
-                    <th>Email</th>
-                    <th>Password</th>
-                    <th>RePassword</th>
+                    <th className="header-cell" >User ID</th>
+                    <th className="header-cell">Email</th>
+                    <th className="header-cell">Password</th>
+                    <th className="header-cell">RePassword</th>
                 </tr>
             </thead>
             <tbody>
                 {data.map(item => (
-                    <tr key={item.userId}>
+                    <tr key={item.userId} className="data-row" >
+                        <td>{item.userId}</td>
                         <td>{item.eMail}</td>
                         <td>{item.password}</td>
                         <td>{item.rePassword}</td>
@@ -42,4 +43,4 @@ function LoginRegistration()
 
     
 
-export default LoginRegistration
+export default GetRegistration;

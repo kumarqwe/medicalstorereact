@@ -1,6 +1,6 @@
 import React from 'react'
 import { useEffect,useState } from 'react'
-
+import './table.css';
 
 function Event()
 {
@@ -13,19 +13,19 @@ function Event()
     },[])
     return (
          <div>
-            <button onClick={() => setShowResult(true)}>showResult</button>
+            <button className='Link' onClick={() => setShowResult(true)}>showResult</button>
             {showResult && (
            <table>
             <thead>
                 <tr>
-                    <th>Event ID</th>
-                    <th>Event Name</th>
-                    <th>Discount</th>
+                    <th className='header-cell'  >Event ID</th>
+                    <th className='header-cell' >Event Name</th>
+                    <th className='header-cell' >Discount</th>
                 </tr>
             </thead>
             <tbody>
                 {data.map(item => (
-                    <tr key={item.eventId}>
+                    <tr key={item.eventId} className='data-row' >
                         <td>{item.eventId}</td>
                         <td>{item.eventName}</td>
                         <td>{item.discount}</td>

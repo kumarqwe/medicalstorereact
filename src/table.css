@@ -3,6 +3,7 @@
     font-family: Arial, sans-serif;
     font-size: 14px;
     width: 100%;
+   
   }
   
   .header-cell {
@@ -11,6 +12,7 @@
     color: #2e0fdc;
     font-weight: bold;
     padding: 10px;
+    
   }
   
   .data-row {

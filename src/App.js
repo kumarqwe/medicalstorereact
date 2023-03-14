@@ -4,13 +4,16 @@ import Medicine from './medicinedetails';
 import Event from './eventdetails';
 import Invitation from './invitation';
 import Payment from './payments';
-import Kumar from './kumar';
+import LoginRegistration from './getregistration';
 import BookingMedicine from './bookingmedicine';
 import BookingEvents from './bookingEvents';
 import BookingInvites from './bookingInvitation';
 import BookingPayments from './bookingPayments';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
-
+import Home from './home';
+import Login from './kumar';
+import PostRegistration from './postregistration';
+import GetRegistration from './getregistration';
 
 function App()
  {
@@ -19,7 +22,10 @@ function App()
     <div className="App">
       <BrowserRouter>
       <Routes>
-        <Route path ='/' element={<Kumar/>}/>
+        <Route path ='/' element={<Home/>}/>
+        <Route path ='/kumar' element={<Login/>}/>
+        <Route path ='/postregistration' element={<PostRegistration/>}/>
+        <Route path ='/getregistration' element={<GetRegistration/>}/>
         <Route path ='/event' element={<Event/>}/>
         <Route path ='/medicine' element={<Medicine/>}/>
         <Route path ='/invitation' element={<Invitation/>}/>
